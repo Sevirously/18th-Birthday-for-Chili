@@ -133,6 +133,61 @@ button:hover{
 
 .stem{
 
+   /* ===== Rose ===== */
+
+.rose{
+    position:absolute;
+    top:-22px;
+    left:50%;
+    transform:translateX(-50%) scale(0);
+    width:34px;
+    height:34px;
+    animation:bloomRose 1.6s ease forwards;
+}
+
+.rose::before,
+.rose::after{
+    content:"";
+    position:absolute;
+    width:18px;
+    height:18px;
+    background:#ff5b7d;
+    border-radius:50%;
+}
+
+.rose::before{
+    left:4px;
+    top:7px;
+}
+
+.rose::after{
+    right:4px;
+    top:7px;
+}
+
+.rose .center{
+    position:absolute;
+    width:18px;
+    height:18px;
+    left:8px;
+    top:10px;
+    background:#ff2e63;
+    border-radius:50%;
+    box-shadow:0 0 18px rgba(255,80,130,.8);
+}
+
+@keyframes bloomRose{
+    from{
+        transform:translateX(-50%) scale(0);
+        opacity:0;
+    }
+
+    to{
+        transform:translateX(-50%) scale(1);
+        opacity:1;
+    }
+}
+   
     position:absolute;
 
     bottom:-10px;
