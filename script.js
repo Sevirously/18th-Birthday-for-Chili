@@ -47,14 +47,13 @@ function createStem(left, height, delay) {
     stem.style.height = height + "vh";
     stem.style.animationDelay = delay + "s";
 
+    const rose = document.createElement("div");
+    rose.className = "rose";
+    rose.style.animationDelay = (delay + 3) + "s";
+    rose.innerHTML = '<div class="center"></div>';
+
+    stem.appendChild(rose);
+
     garden.appendChild(stem);
 
 }
-
-function generateGarden() {
-
-    const positions = [8, 18, 28, 40, 52, 64, 76, 88];
-
-    positions.forEach((pos, index) => {
-
-        const height = 30
