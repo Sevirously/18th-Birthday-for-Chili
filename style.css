@@ -1,1 +1,243 @@
+/* =========================
+   Google Fonts
+========================= */
 
+:root{
+    --bg-top:#05060b;
+    --bg-bottom:#111827;
+
+    --gold:#f7d98a;
+    --white:#ffffff;
+    --green:#5bc77c;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+
+    background:
+    radial-gradient(circle at top,#182235 0%,transparent 45%),
+    linear-gradient(to bottom,var(--bg-top),var(--bg-bottom));
+
+    color:white;
+}
+
+/* =========================
+   Scene
+========================= */
+
+#scene{
+
+    position:relative;
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* =========================
+   Hero
+========================= */
+
+#hero{
+
+    position:relative;
+    z-index:20;
+
+    text-align:center;
+
+    padding:25px;
+}
+
+.title{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(45px,8vw,80px);
+
+    color:var(--gold);
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+
+    animation:fadeIn 2s;
+}
+
+.subtitle{
+
+    opacity:.85;
+
+    margin-bottom:30px;
+
+    font-size:clamp(15px,3vw,18px);
+}
+
+button{
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(8px);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    background:rgba(255,255,255,.15);
+}
+
+/* =========================
+   Garden
+========================= */
+
+#garden{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+}
+
+/* stems */
+
+.stem{
+
+    position:absolute;
+
+    bottom:-10px;
+
+    width:3px;
+
+    border-radius:20px;
+
+    background:linear-gradient(to top,#2d8a4f,#7ae59d);
+
+    transform-origin:bottom;
+
+    animation:growStem 4s ease forwards;
+}
+
+/* =========================
+   Particles
+========================= */
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+}
+
+.particle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:white;
+
+    opacity:.35;
+
+    animation:float linear infinite;
+}
+
+/* =========================
+   Envelope
+========================= */
+
+#letterSection{
+
+    display:none;
+}
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+@keyframes growStem{
+
+    from{
+        height:0;
+    }
+
+    to{
+        height:55vh;
+    }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media(max-width:768px){
+
+    .title{
+
+        font-size:52px;
+    }
+
+    button{
+
+        width:220px;
+    }
+
+}
