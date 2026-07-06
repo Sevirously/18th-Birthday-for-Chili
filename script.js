@@ -57,3 +57,41 @@ function createStem(left, height, delay) {
     garden.appendChild(stem);
 
 }
+
+function generateGarden() {
+
+    const positions = [8, 18, 28, 40, 52, 64, 76, 88];
+
+    positions.forEach((pos, index) => {
+
+        const height = 30 + Math.random() * 25;
+
+        createStem(pos, height, index * 0.35);
+
+    });
+
+}
+
+// ------------------------
+// Open Letter
+// ------------------------
+
+const openBtn = document.getElementById("openBtn");
+
+openBtn.addEventListener("click", () => {
+
+    alert("The envelope animation is coming in the next version! 🌸");
+
+});
+
+// ------------------------
+// Start
+// ------------------------
+
+window.addEventListener("load", () => {
+
+    createParticles();
+
+    generateGarden();
+
+});
