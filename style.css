@@ -132,8 +132,16 @@ button:hover{
 /* stems */
 
 .stem{
+    position:absolute;
+    bottom:-10px;
+    width:3px;
+    border-radius:20px;
+    background:linear-gradient(to top,#2d8a4f,#7ae59d);
+    transform-origin:bottom;
+    animation:growStem 4s ease forwards;
+}
 
-   /* ===== Rose ===== */
+/* ===== Rose ===== */
 
 .rose{
     position:absolute;
@@ -186,21 +194,6 @@ button:hover{
         transform:translateX(-50%) scale(1);
         opacity:1;
     }
-}
-   
-    position:absolute;
-
-    bottom:-10px;
-
-    width:3px;
-
-    border-radius:20px;
-
-    background:linear-gradient(to top,#2d8a4f,#7ae59d);
-
-    transform-origin:bottom;
-
-    animation:growStem 4s ease forwards;
 }
 
 /* =========================
